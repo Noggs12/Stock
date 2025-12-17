@@ -134,22 +134,32 @@ function renderProducts() {
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td class="cell-name">${p.name}</td>
-      <td class="cell-number">${formatCurrency(p.costPrice)}</td>
-      <td class="cell-number">${formatCurrency(p.salePrice)}</td>
-      <td class="cell-number">${p.stock}</td>
-      <td class="cell-number">
+      <td class="cell-name" data-label="Producto">${p.name}</td>
+      <td class="cell-number" data-label="Coste">${formatCurrency(
+        p.costPrice
+      )}</td>
+      <td class="cell-number" data-label="Venta">${formatCurrency(
+        p.salePrice
+      )}</td>
+      <td class="cell-number" data-label="Stock">${p.stock}</td>
+      <td class="cell-number" data-label="Vendidas">
         <div class="sold-controls">
           <button class="btn-icon" data-action="decrease">−</button>
           <span>${p.sold}</span>
           <button class="btn-icon" data-action="increase">+</button>
         </div>
       </td>
-      <td class="cell-number">${remaining}</td>
-      <td class="cell-number">${formatCurrency(revenueSold)}</td>
-      <td class="cell-number">${formatCurrency(revenueRemaining)}</td>
-      <td class="cell-number">${formatCurrency(profit)}</td>
-      <td class="cell-number">
+      <td class="cell-number" data-label="Por vender">${remaining}</td>
+      <td class="cell-number" data-label="Ingresos vendidos">${formatCurrency(
+        revenueSold
+      )}</td>
+      <td class="cell-number" data-label="Ingresos pendientes">${formatCurrency(
+        revenueRemaining
+      )}</td>
+      <td class="cell-number" data-label="Beneficio total">${formatCurrency(
+        profit
+      )}</td>
+      <td class="cell-number" data-label="Acciones">
         <button class="btn-icon danger" data-action="delete">✕</button>
       </td>
     `;

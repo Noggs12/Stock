@@ -344,6 +344,59 @@ body {
   .summary-item-wide {
     grid-column: span 1;
   }
+
+  .table-wrapper {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .products-table,
+  .products-table thead,
+  .products-table tbody,
+  .products-table th,
+  .products-table td,
+  .products-table tr {
+    display: block;
+  }
+
+  .products-table thead {
+    display: none;
+  }
+
+  .products-table tr {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    padding: 8px 10px;
+    background: #ffffff;
+  }
+
+  .products-table td {
+    border-bottom: none;
+    text-align: left;
+    padding: 4px 0;
+  }
+
+  .products-table td::before {
+    content: attr(data-label);
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-right: 8px;
+    min-width: 120px;
+    font-weight: 500;
+  }
+
+  .cell-number {
+    text-align: right;
+  }
+
+  .sold-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
 }
 
 
