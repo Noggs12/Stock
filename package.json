@@ -1,0 +1,11 @@
+{
+  "name": "gestion-de-productos-web",
+  "version": "1.0.0",
+  "description": "Pequeña web para gestionar stock de productos, precios de coste y venta, totales vendidos y pendientes.",
+  "private": true,
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
+
+
